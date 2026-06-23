@@ -1,164 +1,152 @@
-# Django Student Management System (beta)
-This is a Simple Student Management System Developed for Educational Purpose using Python (Django).
-Feel free to make changes based on your requirements.
+### Django Student Management System — by Sai Lakshmi
+A complete Student Management System built using Python (Django) with a clean AdminLTE UI, role‑based login, attendance tracking, and interactive dashboard charts.
 
-[Project Demo on YouTube](https://www.youtube.com/watch?v=kArCR96m7uo "Django Student Management System Demo")
-
-I've created this project while learnging Django and followed tutorial series from **SuperCoders**
+This project was developed while learning Django, and the entire UI, charts, and structure have been customized to match my own design and workflow.
 
 And if you like this project then ADD a STAR ⭐️  to this project 👆
 
 ## Features of this Project
 
-### A. Admin Users Can
-1. See Overall Summary Charts of Stuudents Performance, Staffs Perfomrances, Courses, Subjects, Leave, etc.
-2. Manage Staffs (Add, Update and Delete)
-3. Manage Students (Add, Update and Delete)
-4. Manage Course (Add, Update and Delete)
-5. Manage Subjects (Add, Update and Delete)
-6. Manage Sessions (Add, Update and Delete)
-7. View Student Attendance
-8. Review and Reply Student/Staff Feedback
-9. Review (Approve/Reject) Student/Staff Leave
+### A. HOD / Admin
+1) Dashboard with custom charts
 
-### B. Staff/Teachers Can
-1. See the Overall Summary Charts related to their students, their subjects, leave status, etc.
-2. Take/Update Students Attendance
-3. Add/Update Result
-4. Apply for Leave
-5. Send Feedback to HOD
+2) Manage Staff (Add, Edit, Delete)
 
-### C. Students Can
-1. See the Overall Summary Charts related to their attendance, their subjects, leave status, etc.
-2. View Attendance
-3. View Result
-4. Apply for Leave
-5. Send Feedback to HOD
+3) Manage Students
 
+4) Manage Courses
 
-## Support Developer
-1. Subscribe & Share my YouTube Channel - https://bit.ly/vijay-thapa-online-courses
-2. Add a Star 🌟  to this 👆 Repository
+5) Manage Subjects
 
+6) Manage Sessions
 
-## Donate
+7) View Attendance
 
-**[PayPal](https://bit.ly/support-vijay-thapa)**
+8) Approve/Reject Leave
 
-**[Buy me a Coffee  ☕️](https://www.buymeacoffee.com/vijaythapa)**
+9) View & Reply to Feedback
 
-**Donate by wire transfer:** E-Mail at *donate@vijaythapa.com* for wire transfer details. 
+### B. Staff
+1) View dashboard with subject‑wise stats
 
+2) Take & Update Attendance
 
-## How to Install and Run this project?
+3) Add/Update Student Results
 
-### Pre-Requisites:
-1. Install Git Version Control
-[ https://git-scm.com/ ]
+4) Apply for Leave
 
-2. Install Python Latest Version
-[ https://www.python.org/downloads/ ]
+5) Send Feedback
 
-3. Install Pip (Package Manager)
-[ https://pip.pypa.io/en/stable/installing/ ]
+### C. Students
+1) View dashboard with attendance & subject stats
 
-*Alternative to Pip is Homebrew*
+2) View Attendance
 
-### Installation
-**1. Create a Folder where you want to save the project**
+3) View Results
 
-**2. Create a Virtual Environment and Activate**
+4) Apply for Leave
 
-Install Virtual Environment First
-```
-$  pip install virtualenv
-```
-
-Create Virtual Environment
-
-For Windows
-```
-$  python -m venv venv
-```
-For Mac
-```
-$  python3 -m venv venv
-```
-
-Activate Virtual Environment
-
-For Windows
-```
-$  source venv/scripts/activate
-```
-
-For Mac
-```
-$  source venv/bin/activate
-```
-
-**3. Clone this project**
-```
-$  git clone https://github.com/vijaythapa333/django-student-management-system.git
-```
-
-Then, Enter the project
-```
-$  cd django-student-management-system
-```
-
-**4. Install Requirements from 'requirements.txt'**
-```python
-$  pip install -r requirements.txt
-```
-
-**5. Add the hosts**
-
-- Got to settings.py file 
-- Then, On allowed hosts, Add [‘*’]. 
-```python
-ALLOWED_HOSTS = ['*']
-```
-*No need to change on Mac.*
+5) Send Feedback
 
 
-**6. Now Run Server**
+## 📸 Screenshots
 
-Command for PC:
-```python
-$ python manage.py runserver
-```
+Below are some key pages from the Student Management System showing the main features and UI of the application.
 
-Command for Mac:
-```python
-$ python3 manage.py runserver
-```
+---
 
-**7. Login Credentials**
+### 🔐 Login Page
+This is the authentication page where Admin/HOD, Staff, and Students log in.
+![Login](screenshots/login.png)
 
-Create Super User (HOD)
-```
-$  python manage.py createsuperuser
-```
-Then Add Email, Username and Password
+---
 
-**or Use Default Credentials**
+### 🏫 HOD Dashboard
+Displays total students, staff, courses, subjects, and visual charts.
+![HOD Dashboard](screenshots/hod_dashboard.png)
 
-*For HOD /SuperAdmin*
-Email: admin@gmail.com
-Password: admin
+---
 
-*For Staff*
+### 👨‍🏫 Staff Dashboard
+Staff can take attendance, apply for leave, send feedback, and view notifications.
+![Staff Dashboard](screenshots/staff_dashboard.png)
+
+---
+
+### 🎓 Student Dashboard
+Shows attendance summary, pie chart, subject‑wise statistics, and student profile.
+![Student Dashboard](screenshots/student_dashboard.png)
+
+---
+
+### 👥 Manage Students
+Admin can add, update, delete, and view student details.
+![Manage Students](screenshots/manage_students.png)
+
+---
+
+### 👨‍🏫 Manage Staff
+Admin can add, update, delete, and view staff details.
+![Manage Staff](screenshots/manage_staff.png)
+
+
+
+## ⭐ Tech Stack
+- Python
+
+- Django
+
+- SQLite / MySQL
+
+- HTML, CSS, JavaScript
+
+- AdminLTE Template
+
+- Chart.js
+
+## ⭐ How to Run the Project
+
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/django-student-management-system.git
+cd django-student-management-system
+
+# 2. Create & activate virtual environment
+Windows: 
+
+python -m venv venv
+venv\Scripts\activate
+
+Mac:
+
+python3 -m venv venv
+source venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Apply migrations
+python manage.py migrate
+
+# 5. Create superuser
+python manage.py createsuperuser
+
+# 6. Run the server
+python manage.py runserver
+
+
+## ⭐ Default Login Roles (if needed)
+# HOD / Admin
+Email: sai@gmail.com
+Password: sai
+
+# Staff(Demo)
 Email: staff@gmail.com
-Password: staff
+Password: staff1
 
-*For Student*
+# Student(Demo)
 Email: student@gmail.com
-Password: student
+Password: student1
 
-
-
-## For Sponsor or Projects Enquiry
-1. Email - hi@vijaythapa.com
-2. LinkedIn - [vijaythapa](https://www.linkedin.com/in/vijaythapa "Vijay Thapa on LinkedIn")
-
+## ⭐ Author
+# Sai Lakshmi  
+Python Developer • Django Enthusiast

@@ -5,11 +5,11 @@ from .import HodViews, StaffViews, StudentViews
 
 
 urlpatterns = [
-    path('', views.loginPage, name="login"),
+    path('', views.login_page, name="login"),
     # path('accounts/', include('django.contrib.auth.urls')),
-    path('doLogin/', views.doLogin, name="doLogin"),
+    path('doLogin/', views.do_login, name="doLogin"),
     path('get_user_details/', views.get_user_details, name="get_user_details"),
-    path('logout_user/', views.logout_user, name="logout_user"),
+    path('logout/', views.logout_user, name="logout"),
     path('admin_home/', HodViews.admin_home, name="admin_home"),
     path('add_staff/', HodViews.add_staff, name="add_staff"),
     path('add_staff_save/', HodViews.add_staff_save, name="add_staff_save"),
@@ -26,7 +26,7 @@ urlpatterns = [
     path('manage_session/', HodViews.manage_session, name="manage_session"),
     path('add_session/', HodViews.add_session, name="add_session"),
     path('add_session_save/', HodViews.add_session_save, name="add_session_save"),
-    path('edit_session/<session_id>', HodViews.edit_session, name="edit_session"),
+    path('edit_session/<session_id>/', HodViews.edit_session, name="edit_session"),
     path('edit_session_save/', HodViews.edit_session_save, name="edit_session_save"),
     path('delete_session/<session_id>/', HodViews.delete_session, name="delete_session"),
     path('add_student/', HodViews.add_student, name="add_student"),

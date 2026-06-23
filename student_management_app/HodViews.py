@@ -787,7 +787,7 @@ def staff_profile(request):
     pass
 
 
-def student_profile(requtest):
+def student_profile(request):
     pass
 
 

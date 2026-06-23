@@ -16,7 +16,7 @@ class SessionYearModel(models.Model):
 # Overriding the Default Django Auth User and adding One More Field (user_type)
 class CustomUser(AbstractUser):
     user_type_data = ((1, "HOD"), (2, "Staff"), (3, "Student"))
-    user_type = models.CharField(default=1, choices=user_type_data, max_length=10)
+    user_type = models.IntegerField(default=1, choices=user_type_data)
 
 
 
@@ -65,7 +65,7 @@ class Students(models.Model):
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(CustomUser, on_delete = models.CASCADE)
     gender = models.CharField(max_length=50)
-    profile_pic = models.FileField()
+    profile_pic = models.FileField(upload_to="student_profile_pics/",blank=True,null=True)
     address = models.TextField()
     course_id = models.ForeignKey(Courses, on_delete=models.DO_NOTHING, default=1)
     session_year_id = models.ForeignKey(SessionYearModel, on_delete=models.CASCADE)
@@ -150,7 +150,7 @@ class NotificationStudent(models.Model):
 
 class NotificationStaffs(models.Model):
     id = models.AutoField(primary_key=True)
-    stafff_id = models.ForeignKey(Staffs, on_delete=models.CASCADE)
+    staff_id = models.ForeignKey(Staffs, on_delete=models.CASCADE)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
